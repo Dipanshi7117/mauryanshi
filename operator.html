@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>operator</title>
+</head>
+<style>body{background-color:#333333; color:white;}
+</style>
+<body>
+
+
+
+<h1>Q-1   write a program to show that example of pre-increment?</h1>
+<h2>Code:</h2>  
+<pre>
+               #include&lt;stdio.h&gt;
+               void main()
+               {
+               int i=3;
+               ++i;
+               printf("%d",i);
+               }
+
+</pre><br>
+
+<h2>Output:</h2>
+4
+
+<h1>Q-2   write a program to show that example of post-increment?</h1>
+<h2>Code:</h2>  
+<pre>
+               #include&lt;stdio.h&gt;
+               void main()
+               {
+               int i=3;
+               ++i;
+               printf("%d",i);
+               }
+
+</pre>
+<br>
+
+<h2>Output:</h2>
+4
+
+<br>
+
+<h1>Q-3   write a program to show that example of pre-decrement?</h1>
+<h2>Code:</h2>  
+<pre>
+  		#include&lt;stdio.h&gt;
+                void main()
+                {
+                int i=7;<br>
+                --i;
+                printf("%d",i);
+                }
+</pre><br>
+<h2>Output</h2>
+3
+<br>
+
+<h1>Q-4   write a program to show that example of post-decrement?</h1>
+<h2>Code:</h2>  
+<pre>
+              #include&lt;stdio.h&gt;
+              void main()
+              {
+              int i=3;
+              i--;
+              printf("%d",i);
+              }
+</pre><br>
+<h2>Output</h2>
+3
+<br>
+
+
+
+<h1>Q-5  Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h1>
+<h2>Code:</h2> 
+<pre>
+     #include&lt;stdio.h&gt;
+    int main() {
+    int a, b;
+
+    printf("enter two number: ");
+    scanf("%d %d", &a, &b);
+    printf("Add = %d\n\n", a+b);
+
+    printf("enter two number: : ");
+    scanf("%d %d", &a, &b);
+    printf("Subtract = %d\n\n", a-b);
+
+    printf("enter two number: : ");
+    scanf("%d %d", &a, &b);
+    printf("Multiply = %d\n\n", a*b);
+
+    printf("enter two number: : ");
+    scanf("%d %d", &a, &b);
+    printf("Divide = %d\n\n", a/b);
+
+    printf("enter two number: : ");
+    scanf("%d %d", &a, &b);
+    printf("Remainder = %d\n", a%b);
+
+    return 0;
+}
+</pre>
+<br><h2>Output</h2>
+<pre>
+
+Enter two numbers: 20 10
+Add = 30
+
+Enter two numbers: 20 10
+Subtract = 10
+
+Enter two numbers: 20 10
+Multiply = 200
+
+Enter two numbers: 20 10
+Divide = 2
+
+Remainder = 0
+</pre>
+<br>
+
+
+
+<h1>Q-6  Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h1>
+<h2>Code:</h2>  
+<pre>
+
+#include <stdio.h>
+
+int main() {
+    int num, last_digit;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    last_digit = num % 10;
+
+    printf("Last digit = %d\n", last_digit);
+
+    return 0;
+}
+</pre>
+<br>
+<h2>Output</pre>
+Enter any number: 12345
+	
+Last digit of the number = 5
+
+<h1>Q-7   Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+    float num, decimal;
+
+    clrscr();
+
+    printf("Enter a decimal number: ");
+    scanf("%f", &num);
+
+    decimal = num - (int)num;
+
+    printf("Right hand side of decimal point = %.2f", decimal);
+
+    getch();
+}</pre>
+<br>
+<h2>output:</h2>
+<pre>
+Enter a decimal number: 123.456
+
+Right hand side of decimal point = 0.46
+
+<h1>Q-8   Enter a number from user and find out cube of numbers ?</h1>
+
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+  
+  int num, cube;
+	
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    cube = num * num * num;
+
+    printf("Cube of the number = %d", cube);
+
+    getch();
+}
+<h2>Output</h2>
+</pre>
+Enter a number: 5
+
+Cube of the number = 125
+</pre>
+<br>
+<h1>Q-9   Enter float number from user and round of the number ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+      float num;
+    int round;
+
+    clrscr();
+
+    printf("Enter a float number: ");
+    scanf("%f", &num);
+
+    round = num + 0.5;
+
+    printf("Rounded number = %d", round);
+
+    getch();
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a float number: 12.7
+
+Rounded number = 13
+
+<h1>Q-10   Enter float number from user and round of the number ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+    char ch;
+
+    clrscr();
+
+    printf("Enter a lowercase character: ");
+    scanf("%c", &ch);
+
+    printf("Uppercase character = %c", ch - 32);
+
+    getch();
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a lowercase character: a
+
+Uppercase character = A
+</pre>
+<br>
+<h1>Q-11   Enter marks of students and calculate average of student’s marks ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+   
+    int m1, m2, m3, total;
+    float average;
+
+    clrscr();
+
+    printf("Enter marks of first subject: ");
+    scanf("%d", &m1);
+
+    printf("Enter marks of second subject: ");
+    scanf("%d", &m2);
+
+    printf("Enter marks of third subject: ");
+    scanf("%d", &m3);
+
+    total = m1 + m2 + m3;
+
+    average = total / 3.0;
+
+    printf("\nTotal marks = %d", total);
+    printf("\nAverage marks = %.2f", average);
+
+    getch();
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter marks of first subject: 80
+Enter marks of second subject: 70
+Enter marks of third subject: 90
+
+Total marks = 240
+Average marks = 80.00</pre>
+<br>
+<h1>Q-12   Calculate simple interest = (P x R x T)/ 100</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+	
+void main()
+{
+     float p, r, t, si;
+
+    clrscr();
+
+    printf("Enter Principal Amount: ");
+    scanf("%f", &p);
+
+    printf("Enter Rate of Interest: ");
+    scanf("%f", &r);
+
+    printf("Enter Time Period: ");
+    scanf("%f", &t);
+
+    si = (p * r * t) / 100;
+
+    printf("\nSimple Interest = %.2f", si);
+
+    getch();
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter Principal Amount: 10000
+Enter Rate of Interest: 5
+Enter Time Period: 2
+
+Simple Interest = 1000.00</pre>
+<br>
+</body>
+</html>
+
+
+

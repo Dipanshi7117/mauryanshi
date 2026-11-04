@@ -1,0 +1,114 @@
+<html>
+<head>
+</head>
+<style>body{background-color:#333333; color:white;
+}
+</style>
+<body>
+
+<h2>Write a program of recursion and display th output.</h2>
+<h1>Code</h1>
+<pre>
+#include<stdio.h>
+
+int i=1;
+
+void display()
+
+{ if(i<=5)
+{i++;
+display();
+
+printf("%d\n", i);
+i
+void main()
+{
+ clrscr();
+display();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+6
+6
+6
+6
+6
+</pre>
+<br>
+
+<h2>Ques 2 Write a program of recursion with globle variable and display the output.</h2>
+<h1>Code</h1>
+<pre>
+Q.2:#include&ltstdio.h&gt
+#include&ltconio.h&gt
+#include&ltdos.h&gt
+
+{
+int num=1;
+void display()
+{
+     if(num<=5)
+   {
+     printf("%d\n",num);
+     num++;
+     display();
+    }
+ printf("A");
+}
+void main()
+{
+ clrscr();
+ display();  
+}
+</pre>
+<h2>Output</h2>
+<pre>
+1
+2
+3
+4
+5
+AAAAAA
+</pre>
+<br>
+
+<h2>Ques 3 Write a program of recursion with local variable and display the output.</h2>
+<h1>Code</h1>
+<pre>
+void display()
+{
+	 int num=1;
+ 	if(num<=5)
+    {
+	printf("%d\n",num);
+    	num++;
+     	display();
+    }
+    	printf("A");
+    }
+	void main()
+    {
+ 	clrscr();
+	display();
+     }
+</pre>
+<h2>Output</h2>
+<pre>
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+...
+
+</pre>
+<br>
+
+</body>
+</html>

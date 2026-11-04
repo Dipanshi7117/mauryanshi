@@ -1,0 +1,607 @@
+<html>
+<head>
+<title>structure</title>
+</head>
+<style>body{background-color:#333333; color:white;}
+</style>
+<body>
+
+<h1>Que-1  Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</h1>
+<h2>Code</h2>
+<pre>
+
+#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int ID;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee emp[50];
+    int i;
+      printf("Enter details of 50 employees:\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter details of Employee %d\n", i + 1);
+
+        printf("Enter Employee ID: ");
+        scanf("%d", &emp[i].ID);
+
+        printf("Enter Employee Name: ");
+        scanf(" %49[^\n]", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf(" %49[^\n]", emp[i].designation);
+    }
+    printf("%-10s %-25s %-25s\n",
+           "ID", "NAME", "DESIGNATION");
+   for(i = 0; i < 50; i++)
+    {
+        printf("%-10d %-25s %-25s\n",
+               emp[i].ID,
+               emp[i].name,
+               emp[i].designation);
+    }
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter details of 50 employees:
+
+Enter details of Employee 1
+Enter Employee ID: 101
+Enter Employee Name: Rahul
+Enter Designation: Manager
+
+Enter details of Employee 2
+Enter Employee ID: 102
+Enter Employee Name: Aman
+Enter Designation: Developer
+
+ID         NAME                      DESIGNATION
+101        Rahul                     Manager
+102        Aman                      Developer
+</pre>
+<br>
+<h1>Que-2  Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?</h1>
+<h2>Code</h2>
+<pre>
+
+#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int ID;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee emp[50];
+    int i;
+
+
+    printf("Enter details of 50 employees:\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEmployee %d\n", i + 1);
+
+        printf("Enter ID: ");
+        scanf("%d", &emp[i].ID);
+
+        printf("Enter Name: ");
+        scanf(" %49[^\n]", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf(" %49[^\n]", emp[i].designation);
+    }
+
+    
+    printf("       EMPLOYEE NAMES\n");
+    
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("%d. %s\n", i + 1, emp[i].name);
+    }
+
+    return 0;
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter details of 50 employees:
+
+Employee 1
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Employee 2
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Developer
+
+Employee 3
+Enter ID: 103
+Enter Name: Priya
+Enter Designation: Accountant
+
+Employee 4
+Enter ID: 104
+Enter Name: Simran
+Enter Designation: Teacher
+
+Employee 5
+Enter ID: 105
+Enter Name: Arjun
+Enter Designation: Clerk
+
+Employee 6
+Enter ID: 106
+Enter Name: Neha
+Enter Designation: Engineer
+
+Employee 7
+Enter ID: 107
+Enter Name: Karan
+Enter Designation: Designer
+
+Employee 8
+Enter ID: 108
+Enter Name: Pooja
+Enter Designation: HR
+
+Employee 9
+Enter ID: 109
+Enter Name: Rohit
+Enter Designation: Supervisor
+
+Employee 10
+Enter ID: 110
+Enter Name: Simranjit
+Enter Designation: Manager
+
+Employee 11
+Enter ID: 111
+Enter Name: Harpreet
+Enter Designation: Developer
+
+Employee 12
+Enter ID: 112
+Enter Name: Anjali
+Enter Designation: Teacher
+
+Employee 13
+Enter ID: 113
+Enter Name: Mohit
+Enter Designation: Accountant
+
+Employee 14
+Enter ID: 114
+Enter Name: Komal
+Enter Designation: Clerk
+
+Employee 15
+Enter ID: 115
+Enter Name: Gaurav
+Enter Designation: Engineer
+
+Employee 16
+Enter ID: 116
+Enter Name: Deepak
+Enter Designation: Manager
+
+Employee 17
+Enter ID: 117
+Enter Name: Riya
+Enter Designation: Designer
+
+Employee 18
+Enter ID: 118
+Enter Name: Manpreet
+Enter Designation: HR
+
+Employee 19
+Enter ID: 119
+Enter Name: Sahil
+Enter Designation: Developer
+
+Employee 20
+Enter ID: 120
+Enter Name: Nisha
+Enter Designation: Teacher
+
+Employee 21
+Enter ID: 121
+Enter Name: Varun
+Enter Designation: Clerk
+
+Employee 22
+Enter ID: 122
+Enter Name: Jaspreet
+Enter Designation: Engineer
+
+Employee 23
+Enter ID: 123
+Enter Name: Meena
+Enter Designation: Accountant
+
+Employee 24
+Enter ID: 124
+Enter Name: Akash
+Enter Designation: Manager
+
+Employee 25
+Enter ID: 125
+Enter Name: Suman
+Enter Designation: HR
+
+Employee 26
+Enter ID: 126
+Enter Name: Vikas
+Enter Designation: Developer
+
+Employee 27
+Enter ID: 127
+Enter Name: Tanya
+Enter Designation: Designer
+
+Employee 28
+Enter ID: 128
+Enter Name: Raj
+Enter Designation: Supervisor
+
+Employee 29
+Enter ID: 129
+Enter Name: Mandeep
+Enter Designation: Teacher
+
+Employee 30
+Enter ID: 130
+Enter Name: Kavita
+Enter Designation: Clerk
+
+Employee 31
+Enter ID: 131
+Enter Name: Yash
+Enter Designation: Engineer
+
+Employee 32
+Enter ID: 132
+Enter Name: Aarti
+Enter Designation: Accountant
+
+Employee 33
+Enter ID: 133
+Enter Name: Naveen
+Enter Designation: Manager
+
+Employee 34
+Enter ID: 134
+Enter Name: Muskan
+Enter Designation: HR
+
+Employee 35
+Enter ID: 135
+Enter Name: Tarun
+Enter Designation: Developer
+
+Employee 36
+Enter ID: 136
+Enter Name: Shivani
+Enter Designation: Teacher
+
+Employee 37
+Enter ID: 137
+Enter Name: Amanpreet
+Enter Designation: Designer
+
+Employee 38
+Enter ID: 138
+Enter Name: Rohan
+Enter Designation: Clerk
+
+Employee 39
+Enter ID: 139
+Enter Name: Payal
+Enter Designation: Engineer
+
+Employee 40
+Enter ID: 140
+Enter Name: Abhishek
+Enter Designation: Accountant
+
+Employee 41
+Enter ID: 141
+Enter Name: Gurpreet
+Enter Designation: Manager
+
+Employee 42
+Enter ID: 142
+Enter Name: Sakshi
+Enter Designation: HR
+
+Employee 43
+Enter ID: 143
+Enter Name: Nitin
+Enter Designation: Developer
+
+Employee 44
+Enter ID: 144
+Enter Name: Isha
+Enter Designation: Teacher
+
+Employee 45
+Enter ID: 145
+Enter Name: Pankaj
+Enter Designation: Clerk
+
+Employee 46
+Enter ID: 146
+Enter Name: Jasleen
+Enter Designation: Engineer
+
+Employee 47
+Enter ID: 147
+Enter Name: Rakesh
+Enter Designation: Accountant
+
+Employee 48
+Enter ID: 148
+Enter Name: Monika
+Enter Designation: Designer
+
+Employee 49
+Enter ID: 149
+Enter Name: Sandeep
+Enter Designation: Supervisor
+
+Employee 50
+Enter ID: 150
+Enter Name: Kirandeep
+Enter Designation: Manager
+
+================================
+       EMPLOYEE NAMES
+================================
+1. Rahul
+2. Aman
+3. Priya
+4. Simran
+5. Arjun
+6. Neha
+7. Karan
+8. Pooja
+9. Rohit
+10. Simranjit
+11. Harpreet
+12. Anjali
+13. Mohit
+14. Komal
+15. Gaurav
+16. Deepak
+17. Riya
+18. Manpreet
+19. Sahil
+20. Nisha
+21. Varun
+22. Jaspreet
+23. Meena
+24. Akash
+25. Suman
+26. Vikas
+27. Tanya
+28. Raj
+29. Mandeep
+30. Kavita
+31. Yash
+32. Aarti
+33. Naveen
+34. Muskan
+35. Tarun
+36. Shivani
+37. Amanpreet
+38. Rohan
+39. Payal
+40. Abhishek
+41. Gurpreet
+42. Sakshi
+43. Nitin
+44. Isha
+45. Pankaj
+46. Jasleen
+47. Rakesh
+48. Monika
+49. Sandeep
+50. Kirandeep
+</pre>
+<br>
+<h1>Que-3  Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form ?
+Start Solving</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+struct Employee
+{
+    int ID;
+    char name[50];
+    char designation[50];
+};
+
+int main()
+{
+    struct Employee emp[50];
+    int i, j;
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("\nEnter details of Employee %d\n", i+1);
+
+        printf("Enter ID: ");
+        scanf("%d", &emp[i].ID);
+
+        printf("Enter Name: ");
+        scanf("%49s", emp[i].name);
+
+        printf("Enter Designation: ");
+        scanf("%49s", emp[i].designation);
+    }
+    printf("\n\nEMPLOYEE DETAILS\n");
+    printf("ID\tNAME CHARACTERS\n");
+
+    for(i = 0; i < 50; i++)
+    {
+        printf("%d\t", emp[i].ID);
+
+        for(j = 0; emp[i].name[j] != '\0'; j++)
+        {
+            printf("%c ", emp[i].name[j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+</pre><br>
+<h2>Output</h2>
+<pre>
+Enter details of Employee 1
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter details of Employee 2
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Developer
+
+Enter details of Employee 3
+Enter ID: 103
+Enter Name: Priya
+Enter Designation: Accountant
+
+EMPLOYEE DETAILS
+ID      NAME CHARACTERS
+101     R A H U L
+102     A M A N
+103     P R I Y A
+
+</pre>
+<br>
+<h1>Que-4  Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float fee;
+    char dob[20];
+};
+
+int main()
+{
+    struct Student s[50], temp;
+    int i, j, n;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    // Input student details
+    for(i = 0; i < n; i++)
+    {
+        printf("\nEnter details of student %d\n", i+1);
+
+        printf("Enter Roll Number: ");
+        scanf("%d", &s[i].roll);
+
+        printf("Enter Name: ");
+        scanf("%49s", s[i].name);
+
+        printf("Enter Fee: ");
+        scanf("%f", &s[i].fee);
+
+        printf("Enter Date of Birth (DD/MM/YYYY): ");
+        scanf("%19s", s[i].dob);
+    }
+
+    // Sort students in ascending order of roll number
+    for(i = 0; i < n-1; i++)
+    {
+        for(j = 0; j < n-i-1; j++)
+        {
+            if(s[j].roll > s[j+1].roll)
+            {
+                temp = s[j];
+                s[j] = s[j+1];
+                s[j+1] = temp;
+            }
+        }
+    }
+
+    // Display student details
+    printf("\n\nSTUDENT DETAILS IN ASCENDING ORDER\n");
+
+    printf("----------------------------------------------------------\n");
+    printf("ROLL\tNAME\tFEE\t\tDOB\n");
+    printf("----------------------------------------------------------\n");
+
+    for(i = 0; i < n; i++)
+    {
+        printf("%d\t%s\t%.2f\t%s\n",
+               s[i].roll,
+               s[i].name,
+               s[i].fee,
+               s[i].dob);
+    }
+
+    return 0;
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter number of students: 3
+
+Enter details of student 1
+Enter Roll Number: 103
+Enter Name: Rahul
+Enter Fee: 25000
+Enter Date of Birth (DD/MM/YYYY): 12/05/2005
+
+Enter details of student 2
+Enter Roll Number: 101
+Enter Name: Aman
+Enter Fee: 30000
+Enter Date of Birth (DD/MM/YYYY): 15/08/2004
+
+Enter details of student 3
+Enter Roll Number: 102
+Enter Name: Priya
+Enter Fee: 28000
+Enter Date of Birth (DD/MM/YYYY): 20/03/2005
+
+STUDENT DETAILS IN ASCENDING ORDER
+
+ROLL    NAME    FEE         DOB
+101     Aman    30000.00    15/08/2004
+102     Priya   28000.00    20/03/2005
+103     Rahul   25000.00    12/05/2005
+</pre>
+</body>
+</html>

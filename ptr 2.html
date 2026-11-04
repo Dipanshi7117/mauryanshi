@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+body{
+background-color:#333333; color:white;
+}
+</style>
+<body>
+<h1>Que-1 write a program in which we having a 2D array of 2*3 insert the value through pointers & print the values.</h1>
+<h1>Code</h1>
+<pre>
+void main()
+{
+int arr[2][3],i,j,*ptr;
+ptr=arr;
+clrscr();
+printf("enter array elemenets");
+for(i=0;i<6;i++)
+{
+scanf("%d",ptr+i);
+}
+for(i=0;i<2;i++)
+{
+for(j=0;j<3;j++)
+{
+printf("%d  ",arr[i][j]):
+}
+printf("\n");
+}
+}
+<h1>Output</h1>
+enter array elements:23
+45
+65
+76
+65
+54
+23  45  65 76  65  54</h4>
+</pre>
+<br>
+
+<h1>Que-2 A pointer should print the array & through pointer we will fill all the location of the array by asking the value from
+the user & print the array. </h1>
+<h2>Code</h2>
+<pre>
+void main()
+{
+int arr[8],i,*ptr;
+ptr=arr;
+clrscr();
+printf("enter array elemenets");
+for(i=0;i<8;i++)
+{
+scanf("%d",ptr+i);
+}
+for(i=0;i<8;i++)
+{
+printf("%d  ",*(ptr+i)):
+}
+}
+<h1>Output</h1>
+enter array elements:67
+45
+98
+65
+73
+44
+56
+67
+67  45  98  65  73  44  56  67
+</pre>
+<br>
+
+</body>
+</html>

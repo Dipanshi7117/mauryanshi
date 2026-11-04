@@ -1,0 +1,440 @@
+<html>
+<head>
+<style>
+body{
+background-color:#333333; color:white;
+}
+</style>
+</head>
+<body>
+
+<h1>Que-1  Enter a string from user and convert in uppercase ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[50];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i] - 32;
+        }
+    }
+
+    printf("Uppercase string = %s", str);
+
+    return 0;
+}
+</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: hello
+
+Uppercase string = HELLO
+</pre><br>
+<h1>Que-2  Enter a string from user and convert into lowercase ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[50];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Lowercase string = %s", str);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: HELLO
+
+Lowercase string = hello</pre>
+<br>
+<h1>Que-3  Enter a string from user and convert into sentence case ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(i == 0 && str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i] - 32;
+        }
+        else if(i != 0 && str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Sentence case = %s", str);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: hELLO
+
+Sentence case = Hello</pre>
+<br>
+<h1>Que-4  Enter a string from user and convert into title case ?<h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    scanf(" %[^\n]", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(i == 0 || str[i-1] == ' ')
+        {
+            if(str[i] >= 'a' && str[i] <= 'z')
+                str[i] = str[i] - 32;
+        }
+        else
+        {
+            if(str[i] >= 'A' && str[i] <= 'Z')
+                str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Title Case = %s", str);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: hello world
+
+Title Case = Hello World</pre>
+<br>
+<h1>Que-5  Enter a string from user and convert into toggle case ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    scanf(" %[^\n]", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i] - 32;
+        }
+        else if(str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Toggle Case = %s", str);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: Hello World
+
+Toggle Case = hELLO wORLD</pre>
+<br>
+<h1>Que-6  Enter a string from user and final length of the string ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[100];
+    int i, count = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        count++;
+    }
+
+    printf("Length of string = %d", count);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: HELLO
+
+Length of string = 5</pre>
+<br>
+<h1>Que-7 Enter a string from user and compare those string ?</h1>
+<h2>Code</h2>
+<pre>
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[50], str2[50];
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    if(strcmp(str1, str2) == 0)
+    {
+        printf("Strings are equal");
+    }
+    else
+    {
+        printf("Strings are not equal");
+    }
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter first string: Hello
+Enter second string: Hello
+
+Strings are equal</pre>
+<br>
+<h1>Que-8  Enter a string from user and concatenate the string ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char str1[100], str2[50];
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    strcat(str1, str2);
+
+    printf("Concatenated string = %s", str1);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter first string: Hello
+Enter second string: World
+
+Concatenated string = HelloWorld</pre>
+<br>
+<h1>Que-9 Enter a string from user and copy that string into another string ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char str1[50], str2[50];
+
+    printf("Enter a string: ");
+    scanf("%s", str1);
+
+    strcpy(str2, str1);
+
+    printf("Copied string = %s", str2);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: Hello
+
+Copied string = Hello</pre>
+<br>
+<h1>Que-10  Enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[50];
+    int n;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(n >= 0 && n < strlen(str))
+    {
+        printf("Character = %c", str[n]);
+    }
+    else
+    {
+        printf("Out of Bound");
+    }
+
+    return 0;
+}</pre><br>
+<h2>Output</h2>
+<pre>
+Enter a string: HELLO
+Enter a number: 2
+
+Character = L</pre>
+<br>
+<h1>Que-11  Enter the string from user and print each character in new line ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str[50];
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        printf("%c\n", str[i]);
+    }
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: HELLO
+
+H
+E
+L
+L
+O</pre>
+<br>
+<h1>Que-12  Enter the string from user and copy reverse order into another string ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char str1[50], str2[50];
+    int i, j;
+
+    printf("Enter a string: ");
+    scanf("%s", str1);
+
+    j = strlen(str1) - 1;
+
+    for(i = 0; str1[i] != '\0'; i++)
+    {
+        str2[i] = str1[j];
+        j--;
+    }
+
+    str2[i] = '\0';
+
+    printf("Reverse string = %s", str2);
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter a string: HELLO
+
+Reverse string = OLLEH</pre>
+<br>
+<h1>Que-13  Enter two string from user and print difference each character ?</h1>
+<h2>Code</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char str1[50], str2[50];
+    int i;
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    for(i = 0; str1[i] != '\0' && str2[i] != '\0'; i++)
+    {
+        printf("Difference = %d\n", str1[i] - str2[i]);
+    }
+
+    return 0;
+}</pre>
+<br>
+<h2>Output</h2>
+<pre>
+Enter first string: ABC
+Enter second string: ACE
+
+Difference = 0
+Difference = -1
+Difference = -2</pre>
+<br>
+</body>
+</html>
