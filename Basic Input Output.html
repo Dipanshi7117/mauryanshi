@@ -1,0 +1,445 @@
+<DOCTYPE! html>
+<html>
+<head>
+<title>input output</title>
+</head>
+<style>body{background-color:#333333; color:white;}
+</style>
+<body>
+
+<h1>Que-1 Write a program to print the message: Today I made my first C Program. easy code for begginer in c programing</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Today i made my first C Program.");
+
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Today i made my first C Program.
+</pre>
+<br>
+
+<h1>Que-2 Write a program to read a character from the keyboard and display it on the screen.</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    printf("Entered character is: %c", ch);
+
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Enter a character: A
+Entered character is: A
+</pre>
+<br>
+
+<h1>Que-3 Write a program to read only 4 characters from the keyboard and display it on the screen in a separate line.</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char a, b, c, d;
+
+    printf("Enter 4 characters: ");
+    scanf("%c %c %c %c", &a, &b, &c, &d);
+
+    printf("%c\n", a);
+    printf("%c\n", b);
+    printf("%c\n", c);
+    printf("%c\n", d);
+
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Enter 4 characters: A B C D
+A
+B
+C
+D
+</pre>
+<br>
+
+<h1>Que-4 Write a program to print your name at center of the first line?</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("\t\t\tDipanshi Maurya");
+return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+                    Dipanshi Maurya
+</pre>
+<br>
+
+<h1>Que-5 Write a program to store single quote and print that variable to show single quote on output screen.</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char ch;
+    ch = '\'';
+    printf("%c", ch);
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+'
+</pre>
+<br>
+
+<h1>Que-6 Write a program for printing your name on output screen but your name should blink 5 times.</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 5; i++)
+    {
+        printf("Dipanshi\n");
+        delay(700);
+        clrscr();
+    }
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Entered name will blink on the screen like this:
+
+Dipanshi
+</pre>
+<br>
+
+<h1>Que-7 Write a program to print your name at center of the first line ?</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+printf("\t\t\tDipanshi");
+return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+                  Dipanshi
+</pre>
+<br>
+
+<h1>Que-8 Write the program to display this output ?
+#include
+#include
+#include
+void main ()
+{
+clrscr();
+printf(“hello,welcome to c”);
+delay(5000);
+}</h1>
+
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    clrscr();
+
+printf("hello,welcome to c");
+delay(5000);
+getch();
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+hello,welcome to c
+</pre>
+<br>
+
+<h1>Que-9 Write a program to print your name at the center of the page ?</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+printf("\n\n\n\n\n\n\n\n");
+printf("\t\t\t\tDipanshi");
+
+return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+
+
+
+
+
+
+                   				 					Dipanshi
+</pre>
+<br>
+
+<h1>Que-10 Write a program to store single quote and print that variable to show single quote on output screen ? </h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char ch;
+    ch = '\'';
+    printf("%c", ch);
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+'
+</pre>
+<br>
+
+<h1>Que-11 Write a program for printing your name on output screen but your name should blink 5 time ?</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int i;
+
+    for(i = 1; i <= 5; i++)
+    {
+        clrscr();
+        printf("Saraswati");
+        delay(500);
+        clrscr();
+        delay(500);
+    }
+getch();
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre> 
+Saraswati
+</pre>
+
+<h1>Que-12 Enter password display like ****** ? </h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    char pass[20];
+
+    printf("Enter password: ");
+    scanf("%s", pass);
+
+    printf("Password: ******");
+
+    return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Enter password: abc123
+Password: ******
+</pre>
+<br>
+<h1>Que-13 Enter two character from user and print ASCII value ? </h1>
+<h2>Code</ h2>
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+char a, b;
+
+printf("Enter two characters: ");
+scanf("%c %c", &a, &b);
+printf("%d\n", a);
+printf("%d", b);
+
+return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+Enter two characters: A B
+65
+66
+</pre>
+<br>
+<h1>Que-14 Print all ASCII character 0 to 127 ?
+</h1>
+<h2>Code</ h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+for(i = 0; i <= 127; i++)
+{
+printf("%d = %c\n", i, i);
+}
+return 0;
+}
+</pre>
+<br>
+<h2>output</h2>
+<pre>
+0 to 31  = Control characters (not visible)
+
+32  = Space
+33  = !
+34  = "
+35  = #
+36  = $
+37  = %
+38  = &
+39  = '
+40  = (
+41  = )
+42  = *
+43  = +
+44  = ,
+45  = -
+46  = .
+47  = /
+48  = 0
+49  = 1
+50  = 2
+51  = 3
+52  = 4
+53  = 5
+54  = 6
+55  = 7
+56  = 8
+57  = 9
+58  = :
+59  = ;
+60  = <
+61  = =
+62  = >
+63  = ?
+64  = @
+65  = A
+66  = B
+67  = C
+68  = D
+69  = E
+70  = F
+71  = G
+72  = H
+73  = I
+74  = J
+75  = K
+76  = L
+77  = M
+78  = N
+79  = O
+80  = P
+81  = Q
+82  = R
+83  = S
+84  = T
+85  = U
+86  = V
+87  = W
+88  = X
+89  = Y
+90  = Z
+91  = [
+92  = \
+93  = ]
+94  = ^
+95  = _
+96  = `
+97  = a
+98  = b
+99  = c
+100 = d
+101 = e
+102 = f
+103 = g
+104 = h
+105 = i
+106 = j
+107 = k
+108 = l
+109 = m
+110 = n
+111 = o
+112 = p
+113 = q
+114 = r
+115 = s
+116 = t
+117 = u
+118 = v
+119 = w
+120 = x
+121 = y
+122 = z
+123 = {
+124 = |
+125 = }
+126 = ~
+127 = DEL
+</pre>
+<br>
+
+</body>
+</html>

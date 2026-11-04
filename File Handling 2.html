@@ -1,0 +1,361 @@
+<html>
+<head>
+</head>
+<style>body{background-color:#333333; color:white;
+}
+</style>
+<body>
+
+<h2>Ques 1 Enter a file name from the user and the data from the user and put it in file.</h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *fp;
+    char name[20];
+    char data[100];
+
+    clrscr();
+
+    printf("Enter file name: ");
+    scanf("%s", name);
+
+    fp = fopen(name, "w");
+
+    printf("Enter data: ");
+    scanf(" %[^\n]", data);
+
+    fprintf(fp, "%s", data);
+
+    fclose(fp);
+
+    printf("Data saved in file.");
+
+    getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter file name: abc.txt
+
+Enter data: Hello my name is Rahul
+
+Data saved in file.
+</pre>
+<br>
+
+<h2>Ques 2 Enter a file name from the user and the data from the user and put it in file.
+But data from the user till the user wants to enter.</h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *fp;
+    char name[20], ch;
+
+    clrscr();
+
+    printf("Enter file name: ");
+    scanf("%s",name);
+
+    fp=fopen(name,"w");
+
+    printf("Enter data (Press # to stop):\n");
+
+    while((ch=getche())!='#')
+    {
+        putc(ch,fp);
+    }
+
+    fclose(fp);
+
+    printf("\nData saved successfully.");
+
+    getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter file name: abc.txt
+Enter data:
+Hello World#
+Data saved successfully.
+</pre>
+<br>
+
+
+<h2>Ques 3 Enter the file name from the user till the user wants to enter.</h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *fp;
+    char name[20], ch;
+
+    clrscr();
+
+    printf("Enter file name: ");
+    scanf("%s",name);
+
+    fp=fopen(name,"w");
+
+    printf("Enter data (# to stop): ");
+
+    while((ch=getche())!='#')
+    {
+        putc(ch,fp);
+    }
+
+    fclose(fp);
+
+    printf("\nData saved.");
+
+    getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter file name: abc.txt
+Enter data (# to stop): Hello World#
+Data saved.
+</pre>
+<br> 
+
+<h2>Ques 4 Enter a file name from user and copy that file in another file.</h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *a, *b;
+    char name1[20], name2[20], ch;
+
+    clrscr();
+
+    printf("Enter first file name: ");
+    scanf("%s",name1);
+
+    printf("Enter second file name: ");
+    scanf("%s",name2);
+
+    a=fopen(name1,"r");
+    b=fopen(name2,"w");
+
+    while((ch=getc(a))!=EOF)
+    {
+        putc(ch,b);
+    }
+
+    fclose(a);
+    fclose(b);
+
+    printf("File copied successfully.");
+
+getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter first file name: abc.txt
+Enter second file name: xyz.txt
+
+File copied successfully.
+</pre>
+<br>
+
+<h2>Ques 5 Enter a file name from user and the data from user and rename that file. But rename should be by user. </h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *fp;
+    char name[20], newname[20], data[100];
+
+    clrscr();
+
+    printf("Enter file name: ");
+    scanf("%s",name);
+
+    fp=fopen(name,"w");
+
+    printf("Enter data: ");
+    scanf("%s",data);
+
+    fprintf(fp,"%s",data);
+    fclose(fp);
+
+    printf("Enter new file name: ");
+    scanf("%s",newname);
+
+    rename(name,newname);
+
+    printf("File renamed successfully.");
+
+getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter file name: abc.txt
+Enter data: Hello
+Enter new file name: xyz.txt
+
+File renamed successfully.
+</pre>
+<br>
+
+<h2>Ques 6 Enter two files from user and concatenate into 3rd file. </h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+
+void main()
+{
+    FILE *a, *b, *c;
+    char name1[20], name2[20], name3[20], ch;
+
+    clrscr();
+
+    printf("Enter first file name: ");
+    scanf("%s",name1);
+
+    printf("Enter second file name: ");
+    scanf("%s",name2);
+
+    printf("Enter third file name: ");
+    scanf("%s",name3);
+
+    a=fopen(name1,"r");
+    b=fopen(name2,"r");
+    c=fopen(name3,"w");
+
+    while((ch=getc(a))!=EOF)
+        putc(ch,c);
+
+    while((ch=getc(b))!=EOF)
+        putc(ch,c);
+
+    fclose(a);
+    fclose(b);
+    fclose(c);
+
+    printf("Files concatenated successfully.");
+
+    getch();
+}
+</pre>
+<h2>Output</h2>
+<pre>
+Enter first file name: abc.txt
+Enter second file name: xyz.txt
+Enter third file name: pqr.txt
+
+Files concatenated successfully.
+</pre>
+<br>
+
+<h2>Ques 7 Create a file count no. of characters in a file.</h2>
+<h1>Code</h1>
+<pre>
+
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+#include&ltdos.h&gt
+void main()
+{FILE *fp;
+char fname[30];
+char ch;
+int count=0;
+clrscr();
+printf("Enter file name: ");
+scanf("%s",fname);
+fp=fopen(fname,"w");
+printf("Enter data: ");
+fflush(stdin);
+while((ch=getchar())!='\n')
+    {fputc(ch,fp);
+    }
+fclose(fp);
+ 
+fp=fopen(fname,"r");
+while((ch=fgetc(fp))!=EOF)
+    { count++;
+    }
+
+ fclose(fp);
+printf("\nTotal characters = %d",count);
+}
+</pre>
+<h2>Output</h2>
+<pre> 
+Enter file name: student.txt
+Enter data: Hello World
+Total characters = 11
+
+</pre>
+<br>
+
+<h2>Ques 8 Create a file and count no. of words in a file. </h2>
+<h1>Code</h1>
+<pre>
+#include&ltstdio.h&gt
+#include&ltconio.h&gt
+#include&ltdos.h&gt
+void main()
+{FILE *fp;
+char fname[30], ch;
+int count=0, flag=0;
+clrscr();
+printf("Enter file name: ");
+scanf("%s",fname);
+fp=fopen(fname,"w");
+printf("Enter data: ");
+fflush(stdin);
+ while((ch=getchar())!='\n')
+    {
+        fputc(ch,fp);
+    }
+fclose(fp);
+fp=fopen(fname,"r");
+while((ch=fgetc(fp))!=EOF)
+    {if(ch!=' ' && ch!='\n' && ch!='\t')
+       {if(flag==0)
+            { count++;
+              flag=1;
+            }
+        }
+  else
+        {
+            flag=0;
+        }
+    }
+fclose(fp);
+printf("\nTotal words = %d",count);
+}
+
+</pre>
+<h2>Output</h2>
+<pre>
+Enter file name: student
+Enter data: I am learning C programming
+Total words = 5
+</pre>
+<br>
+
+</body>
+</html>
